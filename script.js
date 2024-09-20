@@ -11,5 +11,13 @@ submit.addEventListener("click", () => {
 
     copy.addEventListener("click", () => {
         navigator.clipboard.writeText(link.value);
+        const confirmation = document.createElement("div");
+        confirmation.classList.add("confirmation");
+        confirmation.textContent = "Copied to clipboard."
+        popup.appendChild(confirmation);
+
+        setTimeout(function(){
+            popup.classList.remove("show");
+        },7000);
     })
 })

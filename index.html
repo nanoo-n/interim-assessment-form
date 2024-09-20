@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://criterionedge.com/wp-content/uploads/favicon01.png">
     <title>Interim Assessment Form Pre-Form</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <form>
-            <label for="client">Client:</label><br>
-            <input type="text" id="client" name="client"><br>
-            <label for="project">Project:</label><br>
-            <input type="text" id="project" name="project">
-        </form>
-        <button type="submit" id="submit">Submit</button>
-    </div>
+    <nav>
+        <img src="https://criterionedge.com/wp-content/uploads/CE-LOGO-080818-HOR.png" alt="Criterion Edge Logo" class="w-40">
+    </nav>
     <div class="popup">
         <div id="text">Your URL is ready!</div>
         <input type="text" id="link"><br>
         <button type="button" id="copy">Copy</button>
     </div>
+    <div class="container">
+        <header>
+            <h1 class="header">Interim Assessment Form</h1>
+        </header>
+        <form>
+            <div class="client-form">
+                <label for="client">Client:<span>*</span></label>
+                <input type="text" id="client" name="client" placeholder="Type your client name">
+            </div>
+            <div class="project-form">
+                <label for="project">Project:<span>*</span></label>
+                <input type="text" id="project" name="project" placeholder="Type your project name">
+            </div>
+        </form>
+        <div class="s-button">
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </div>
+    <div class="footer">© Criterion Edge, Inc. 2023</div>
 </body>
 </html>
