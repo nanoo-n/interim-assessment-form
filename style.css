@@ -127,6 +127,9 @@ span {
     border-radius: 8px;
 }
 
+#copy {
+    margin-top: 4px;
+}
 #copy:hover {
     background-color: #e5e7eb;
     cursor: grab;

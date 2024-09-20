@@ -18,6 +18,7 @@ submit.addEventListener("click", () => {
 
         setTimeout(function(){
             popup.classList.remove("show");
+            popup.removeChild(confirmation);
         },7000);
     })
 })
