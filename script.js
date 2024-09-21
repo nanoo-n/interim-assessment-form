@@ -6,19 +6,24 @@ const project = document.querySelector("#project");
 const copy = document.querySelector("#copy");
 
 submit.addEventListener("click", () => {
+    //TODO add conditional to not do anything unless client & project are filled
     popup.classList.add("show");
-    link.value = `https://www.cognitoforms.com/CriterionEdge/InterimPerformanceAssessment?entry={"Client":"${client.value}","Project":"${project.value}"}`;
+    link.value = `https://www.cognitoforms.com/CriterionEdge/InterimPerformanceAssessment?entry={"Client":"${client.value}","Project":"${project.value}"}`;    
+})
 
-    copy.addEventListener("click", () => {
-        navigator.clipboard.writeText(link.value);
-        const confirmation = document.createElement("div");
-        confirmation.classList.add("confirmation");
-        confirmation.textContent = "Copied to clipboard."
-        popup.appendChild(confirmation);
+copy.addEventListener("click", () => {
+    navigator.clipboard.writeText(link.value);
+    const confirmation = document.createElement("div");
+    confirmation.classList.add("confirmation");
+    confirmation.textContent = "Copied to clipboard."
+    popup.appendChild(confirmation);
 
-        setTimeout(function(){
-            popup.classList.remove("show");
-            popup.removeChild(confirmation);
-        },7000);
-    })
+    setTimeout(function(){
+        popup.classList.remove("show");
+        //popup.removeChild(confirmation);
+        const confirmations = document.querySelectorAll(".confirmation")
+        confirmations.forEach(div => {
+            div.remove();
+        });
+    },7000);
 })
