@@ -3,12 +3,14 @@ const popup = document.querySelector('.popup');
 const link = document.querySelector("#link");
 const client = document.querySelector("#client");
 const project = document.querySelector("#project");
+const reviewer = document.querySelector("#reviewer");
+const reviewee = document.querySelector("#reviewee");
 const copy = document.querySelector("#copy");
 
 submit.addEventListener("click", () => {
     //TODO add conditional to not do anything unless client & project are filled
     popup.classList.add("show");
-    link.value = `https://www.cognitoforms.com/CriterionEdge/InterimPerformanceAssessment?entry={"Client":"${client.value}","Project":"${project.value}"}`;    
+    link.value = `https://www.cognitoforms.com/CriterionEdge/InterimPerformanceAssessment?entry={"Client":"${client.value}","Project":"${project.value}","YourEmail":"${reviewer.value}","RevieweeEmail":"${reviewee.value}"}`;    
 })
 
 copy.addEventListener("click", () => {
